@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #363636;
+    font-family: 'Poppins', sans-serif;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+h1{
+    width: 90%;
+    font-size: xxx-large;
+    margin: 0 auto 90px;
+    color: #40bda0;
+    text-align: center;
+    text-transform: capitalize;
+}
+#container > div:first-of-type{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+.dados{
+    width: 200px;
+    height: 200px;
+    border-radius: 5%;
+    box-shadow: 0 7px 20px rgba(54, 54, 54, 0.4);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background-color: #F4F4F4;
+}
+.circleDado{
+    width: 21px;
+    height: 21px;
+    background-color: #000;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.scale{
+    -webkit-animation: transformer .5s ease-in;
+    animation: transformer .6s ease-in;
+}
+@keyframes transformer {
+    from {
+        transform: rotate(0deg) scale(0.1);
+    }
+    to {
+        transform: rotate(360deg) scale(1);
+    }
+}
+.btn{
+    font-size: large;
+    margin: 100px 0 0;
+    padding: 15px 45px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-submit{
+    background-color: #329b83;
+    color: #FFF;
+    transition: .25s background-color, color;
+}
+.btn-submit:hover,
+.btn-submit:focus,
+.btn-submit:active{
+    background-color: #40bda0;
+}
+
+@media (max-width: 576px) {
+    h1{
+        margin-bottom: 30px;
+        font-size: xx-large;
+    }
+    #container > div:first-of-type {
+        flex-direction: column;
+        gap: 0;
+    }
+    #container > div:last-of-type{
+        width: 100%;
+        text-align: center;
+    }
+    .dados{
+        width: 150px;
+        height: 150px;
+    }
+    #dado2{
+        margin-top: 40px;
+    }
+    .btn{
+        width: 90%;
+        margin: 50px auto 0;
+        padding: 15px 0;
+    }
+}
